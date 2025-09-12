@@ -167,6 +167,6 @@
 	main section,
 	footer section {
 		@apply w-lg;
-		/* @apply border-1 border-red-500; */
+		@apply border-1 border-red-500;
 	}
 }
