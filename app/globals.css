@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -43,10 +44,28 @@
 	--radius-xl: calc(var(--radius) + 4px);
 }
 
+@theme {
+	--font-sans: 'Barlow', sans-serif;
+	--color-primary: oklch(0.5967 0.2227 286.62);
+	--color-primary-lighter: oklch(0.6598 0.1941 289.1);
+	--color-primary-darker: oklch(0.2574 0.0453 277.29);
+	--color-primary-darkest: oklch(0.2913 0.0513 276.54);
+	--color-neutral-lighter: oklch(0.9197 0.0315 277.91);
+	--color-neutral-darker: oklch(0.6539 0.0511 277.06);
+	--color-neutral: oklch(0.642 0.0892 276.2);
+	--color-neutral-darkest: oklch(0.1657 0.0172 273.52);
+	--color-error: oklch(0.6549 0.1845 23.71);
+	--color-error-lighter: oklch(0.7848 0.1252 20.28);
+	--color-base-lightest: oklch(0.98 0.004 286.33);
+	--color-base-darkest: oklch(0.206 0.03 277.59);
+}
+
 :root {
 	--radius: 0.625rem;
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.129 0.042 264.695);
+	/* --background: oklch(1 0 0); */
+	--background: oklch(0.98 0.004 286.33);
+	/* --foreground: oklch(0.129 0.042 264.695); */
+	--foreground: oklch(0.206 0.03 277.59);
 	--card: oklch(1 0 0);
 	--card-foreground: oklch(0.129 0.042 264.695);
 	--popover: oklch(1 0 0);
@@ -128,5 +147,26 @@
 	}
 	aside {
 		@apply row-span-2;
+	}
+	main {
+		@apply my-12;
+	}
+}
+
+@layer components {
+	aside {
+		@apply p-2;
+	}
+	main {
+		@apply flex flex-col items-center gap-10;
+	}
+	footer {
+		@apply w-full flex justify-center;
+	}
+	main header,
+	main section,
+	footer section {
+		@apply w-lg;
+		/* @apply border-1 border-red-500; */
 	}
 }

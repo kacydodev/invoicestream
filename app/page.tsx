@@ -1,3 +1,11 @@
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+
 export default function HomePage() {
-	return <main>main</main>;
+	return (
+		<>
+			<Navbar />
+			<main>main</main>
+		</>
+	);
 }
