@@ -6,6 +6,7 @@ import { ChevronRight, Hash, Plus } from 'lucide-react';
 import Image from 'next/image';
 import emptyImg from '@/assets/illustration-empty.svg';
 import Link from 'next/link';
+import { getBadgeClass } from '@/utils/utils';
 
 export default async function Invoices({ data: invoices }) {
 	if (invoices && invoices.length) {
@@ -17,18 +18,12 @@ export default async function Invoices({ data: invoices }) {
 							style: 'currency',
 							currency: 'AUD',
 						}).format(total);
-
 						const formattedDate = format(payment_due, 'dd MMM yyyy');
-
-						const badgeClass = classNames('w-16', {
-							'bg-green-500': status === 'paid',
-							'bg-yellow-500': status === 'pending',
-							'bg-slate-500': status === 'draft',
-						});
+						const badgeClass = getBadgeClass(status);
 
 						return (
 							<Link key={id} href={`/invoice/${id}`}>
-								<Card className='shadow-md/10 shadow-muted-foreground border-border/50'>
+								<Card className='shadow-none'>
 									<CardContent className='grid grid-cols-[repeat(4,_1fr)_auto_auto] gap-4'>
 										<p className='font-bold'>
 											<Hash className='inline size-4 text-muted-foreground' />
