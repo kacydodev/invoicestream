@@ -4,13 +4,13 @@ import { Plus } from 'lucide-react';
 
 export default function Header({ count }: { count: number }) {
 	const subTitle =
-		count > 0 ? <>{count} invoices found</> : <>No invoice found</>;
+		count > 0 ? <>{count} invoices found</> : <>0 invoice found</>;
 
 	return (
 		<header className='flex items-center justify-between'>
 			<div>
 				<h2 className='text-3xl'>Invoices</h2>
-				<p>{subTitle}</p>
+				<p className='text-sm text-muted-foreground'>{subTitle}</p>
 			</div>
 			<div className=''>
 				<FilterDropdown />

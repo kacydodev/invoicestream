@@ -11,8 +11,7 @@ export default async function DashboardPage() {
 		<>
 			<main>
 				<Header count={count || 0} />
-				{error && <Error error={error} />}
-				{data && <Invoices data={data} />}
+				{error ? <Error error={error} /> : <Invoices data={data} />}
 			</main>
 		</>
 	);
