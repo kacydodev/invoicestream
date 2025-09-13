@@ -5,15 +5,27 @@ A lightweight invoice tool from an ambitious junior dev. Packed with features su
 ## Installation
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech stacks
+
+Powered by:
+
+- Next.js
+- Typescript
+- Supabase
+- TailwindCSS
+- Shadcn
+- Zustand
+
+## Retrospective
+
+The prospect of working with Next.js and Supabase excites me. I've done projects before, but never a fully-realised concept of this scale. I find Next.js similar to React, with SSR-powered components which (hopefully) translates to speed. I did my research on Supabase and it seems to be the right fit to familiarise myself to SQL Database.
+
+What I tend to do super early on is deploying to Vercel since addressing build issues early on is much easier.
+
+As a developer with a strong CSS background, TailwindCSS has been the pinnacle of rapid prototyping and styling management with ease. The best thing about TailwindCSS is it automatically purge unsused class, so my app is optimised even with minimal effort.
