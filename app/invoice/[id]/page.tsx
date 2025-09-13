@@ -3,11 +3,9 @@ import { formatDate, formatPrice } from '@/utils/utils';
 import Error from '@/components/Error';
 import InvoiceHeader from './components/InvoiceHeader';
 
-export default async function InvoicePage({
-	params,
-}: {
-	params: { id: string };
-}) {
+type ParamsType = Promise<{ id: string }>;
+
+export default async function InvoicePage({ params }: { params: ParamsType }) {
 	const { id: paramId } = await params;
 	const { data: invoice, error } = await getInvoice(paramId);
 	const {
