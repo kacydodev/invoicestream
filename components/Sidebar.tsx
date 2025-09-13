@@ -9,9 +9,9 @@ function User() {
 	);
 }
 
-export default function Navbar() {
+export default function Sidebar() {
 	return (
-		<aside className='flex flex-col gap-6 items-center justify-between rounded-r-lg text-sm bg-primary-darker text-input'>
+		<aside className='flex flex-col gap-6 items-center justify-between rounded-r-lg text-sm bg-sidebar'>
 			<ul className='flex flex-col gap-6 items-center justify-center'>
 				{logoMark}
 				<li>
