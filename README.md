@@ -1,5 +1,6 @@
 # Invoicestream.io
 
+![Website Deploy](https://deploy-badge.vercel.app/?url=https%3A%2F%2Fdevelopment.invoicestream.io%2F&logo=Vercel&name=Vercel)
 A lightweight invoice tool from an ambitious junior dev. Packed with features such as: add/edit invoices, filtering, status tracking. Responsive to desktop and mobile devices and comes with dark mode 🌜!
 
 ## Installation
