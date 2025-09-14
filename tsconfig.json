@@ -13,7 +13,6 @@
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"incremental": true,
-		"noImplicitAny": false,
 		"plugins": [
 			{
 				"name": "next"
@@ -28,7 +27,8 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"./custom.d.ts"
+		"./custom.d.ts",
+		"app/invoice/[id]/page.jsx"
 	],
 	"exclude": ["node_modules"]
 }
