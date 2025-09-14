@@ -26,7 +26,7 @@ Powered by:
 
 ## Retrospective
 
-The prospect of working with (Next.js)[https://nextjs.org/] and (Supabase)[https://supabase.com/] excites me. I've used them before, but never a fully-realised concept of this scale. I find Next.js similar to React, with SSR-powered components which (hopefully) translates to speed. I did my research on Supabase and it seems to be the right fit to familiarise myself to SQL Database.
+The prospect of working with [Next.js](https://nextjs.org/) and [Supabase](https://supabase.com/) excites me. I've used them before, but never a fully-realised concept of this scale. I find Next.js similar to React, with SSR-powered components which (hopefully) translates to speed. I did my research on Supabase and it seems to be the right fit to familiarise myself to SQL Database.
 
 What I tend to do super early on is deploying to Vercel since addressing build issues early on is much easier.
 
