@@ -26,8 +26,8 @@ Powered by:
 
 ## Retrospective
 
-The prospect of working with [Next.js](https://nextjs.org/) and [Supabase](https://supabase.com/) excites me. I've used them before, but never a fully-realised concept of this scale. I find Next.js similar to React, with SSR-powered components which (hopefully) translates to speed. I did my research on Supabase and it seems to be the right fit to familiarise myself to SQL Database.
+The prospect of working with [Next.js](https://nextjs.org/) and [Supabase](https://supabase.com/) excites me. I've used them before, but never a fully-realised concept of this scale. I find Next.js similar to React, but with SSR-powered components which (hopefully) translates to speed. As for Supabase, I did my research and find it a good fit to familiarise myself with SQL Database strategies.
 
-What I tend to do super early on is deploying to Vercel since addressing build issues early on is much easier.
+What I tend to do super early on is deploying to Vercel because it's much easier to address build issues early on.
 
 As a developer with a strong CSS background, TailwindCSS has been the pinnacle of rapid prototyping and styling management with ease. The best thing about TailwindCSS is it automatically purge unsused class, so my app is optimised even with minimal effort.
