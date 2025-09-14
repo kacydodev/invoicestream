@@ -1,10 +1,11 @@
+'use server';
+
 import { createClient } from '@/utils/supabase/server';
 
 type StatusType = 'paid' | 'pending' | 'draft';
 
-const supabase = await createClient();
-
-export function getInvoices() {
+export async function getInvoices() {
+	const supabase = await createClient();
 	return supabase.from('invoices_v02').select(
 		`
     id, status, invoice_id, payment_due, total,
@@ -14,7 +15,8 @@ export function getInvoices() {
 	);
 }
 
-export function getInvoicesByStatus(status: StatusType) {
+export async function getInvoicesByStatus(status: StatusType) {
+	const supabase = await createClient();
 	return supabase
 		.from('invoices_v02')
 		.select(
