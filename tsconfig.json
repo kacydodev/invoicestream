@@ -26,11 +26,10 @@
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
+		"**/*.js",
+		"**/*.jsx",
 		".next/types/**/*.ts",
-		"./custom.d.ts",
-		"app/invoice/[id]/page.jsx",
-		"app/dashboard/components/Invoices.jsx",
-		"app/dashboard/page.jsx"
+		"./custom.d.ts"
 	],
 	"exclude": ["node_modules"]
 }
