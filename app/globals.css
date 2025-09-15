@@ -46,8 +46,8 @@
 }
 
 @theme {
+	/* TODO: Remove */
 	/* --font-sans: 'Barlow', sans-serif; */
-	--font-sans: 'Cabin', sans-serif;
 	--color-primary: oklch(0.5967 0.2227 286.62);
 	--color-primary-lighter: oklch(0.6598 0.1941 289.1);
 	--color-primary-darker: oklch(0.2574 0.0453 277.29);
@@ -60,9 +60,12 @@
 	--color-error-lighter: oklch(0.7848 0.1252 20.28);
 	--color-base-lightest: oklch(0.98 0.004 286.33);
 	--color-base-darkest: oklch(0.206 0.03 277.59);
+
+	/* TODO: Keep as is */
+	--font-sans: 'Cabin', sans-serif;
 	--color-paid: oklch(0.7817 0.1527 164.84);
 	--color-pending: oklch(0.7554 0.177697 59.6859);
-	--color-draft: var(--color-muted-foreground);
+	--color-draft: oklch(0.554 0.046 257.417);
 }
 
 :root {
@@ -70,8 +73,8 @@
 	/* --background: oklch(1 0 0); */
 	--background: oklch(0.98 0.004 286.33);
 	/* --foreground: oklch(0.129 0.042 264.695); */
-	--foreground: oklch(0.206 0.03 277.59);
-	--card: oklch(1 0 0);
+	--foreground: var(--color-base-darkest);
+	--card: var(--color-white);
 	--card-foreground: oklch(0.129 0.042 264.695);
 	--popover: oklch(1 0 0);
 	--popover-foreground: oklch(0.129 0.042 264.695);
@@ -180,6 +183,16 @@
 }
 
 @layer utilities {
+	h1 {
+		@apply text-3xl;
+	}
+	h2 {
+		@apply text-xl;
+	}
+	h4 {
+		@apply text-sm;
+	}
+
 	span.badge-paid,
 	span.badge-pending,
 	span.badge-draft {
