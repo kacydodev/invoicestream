@@ -1,6 +1,4 @@
-import { PostgrestError } from '@supabase/supabase-js';
-
-export default function Error({ error }: { error: PostgrestError }) {
+export default function Error({ error }: { error: object }) {
 	return (
 		<section>
 			<pre>{JSON.stringify(error, null, 2)}</pre>

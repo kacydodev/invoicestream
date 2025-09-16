@@ -1,8 +1,16 @@
 import { Button } from '@/components/ui/button';
 import { FilterDropdown } from './FilterDropdown';
 import { Plus } from 'lucide-react';
+import React from 'react';
+import { StatusType } from '@/utils/types';
 
-export default function Header({ count }: { count: number }) {
+interface HeaderInterface {
+	count: number;
+	status: StatusType | '';
+	setStatus: React.Dispatch<React.SetStateAction<StatusType | ''>>;
+}
+
+export default function Header({ count, status, setStatus }: HeaderInterface) {
 	const subTitle =
 		count > 0 ? <>{count} invoices found</> : <>0 invoice found</>;
 
@@ -13,7 +21,7 @@ export default function Header({ count }: { count: number }) {
 				<p className='text-sm text-muted-foreground'>{subTitle}</p>
 			</div>
 			<div className=''>
-				<FilterDropdown />
+				<FilterDropdown status={status} setStatus={setStatus} />
 				<Button>
 					<Plus className='after:content-[" fdf"] after:bg-white after:w-6 after:h-6' />
 					New Invoice

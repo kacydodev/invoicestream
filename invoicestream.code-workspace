@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "invoicestream",
+			"path": "."
+		},
+		{
+			"name": "invoice-app-starter",
+			"path": "../../../Downloads/invoice-app-starter"
+		},
+		{
+			"name": "study-notes",
+			"path": "../study-notes"
+		}
+	],
+	"settings": {}
+}

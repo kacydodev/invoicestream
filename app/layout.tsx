@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Sidebar from '@/components/Sidebar';
 import Footer from '@/components/Footer';
+import { ReactQueryClientProvider } from '@/components/QueryClientProvider';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -14,13 +15,15 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		// <html lang='en' className='dark'>
-		<html lang='en'>
-			<body>
-				<Sidebar />
-				{children}
-				<Footer />
-			</body>
-		</html>
+		<ReactQueryClientProvider>
+			<html lang='en' className='dark'>
+				{/* <html lang='en'> */}
+				<body>
+					<Sidebar />
+					{children}
+					<Footer />
+				</body>
+			</html>
+		</ReactQueryClientProvider>
 	);
 }

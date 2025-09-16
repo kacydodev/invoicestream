@@ -1,14 +1,13 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { format } from 'date-fns';
 import { Badge } from '@/components/ui/badge';
-import classNames from 'classnames';
 import { ChevronRight, Hash, Plus } from 'lucide-react';
 import Image from 'next/image';
 import emptyImg from '@/assets/illustration-empty.svg';
 import Link from 'next/link';
 import { getBadgeClass } from '@/utils/utils';
 
-export default async function Invoices({ data: invoices }) {
+export default function Invoices({ data: invoices }) {
 	if (invoices && invoices.length) {
 		return (
 			<section className='space-y-6'>

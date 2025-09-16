@@ -8,15 +8,21 @@ import {
 	DropdownMenuRadioItem,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { StatusType } from '@/utils/types';
 import { ChevronDown, X } from 'lucide-react';
+import React from 'react';
 import { useState } from 'react';
+
+interface FilterDropdown {
+	status: StatusType | '';
+	setStatus: React.Dispatch<React.SetStateAction<StatusType | ''>>;
+}
 
 const filterOptions = ['paid', 'pending', 'draft'];
 
-export function FilterDropdown() {
-	const [selected, setSelected] = useState('');
-	const filterLabel = selected ? (
-		selected
+export function FilterDropdown({ status, setStatus }: FilterDropdown) {
+	const filterLabel = status ? (
+		status
 	) : (
 		<>
 			Filter by Status <ChevronDown />
@@ -25,8 +31,8 @@ export function FilterDropdown() {
 
 	return (
 		<DropdownMenu>
-			{selected && (
-				<Button onClick={() => setSelected('')} variant='ghost' size='icon'>
+			{status && (
+				<Button onClick={() => setStatus('')} variant='ghost' size='icon'>
 					<X />
 				</Button>
 			)}
@@ -36,7 +42,10 @@ export function FilterDropdown() {
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className=''>
-				<DropdownMenuRadioGroup value={selected} onValueChange={setSelected}>
+				<DropdownMenuRadioGroup
+					value={status}
+					onValueChange={(value) => setStatus(value as StatusType | '')}
+				>
 					{filterOptions.map((option) => (
 						<DropdownMenuRadioItem key={option} value={option}>
 							{option}
