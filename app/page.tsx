@@ -1,3 +1,4 @@
+import Login from '@/components/Login';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -8,12 +9,14 @@ export default function HomePage() {
 			{/* <Navbar /> */}
 			<main>
 				<section>
-					<Button variant='link' asChild>
+					{/* <Button variant='link' asChild>
 						<Link href='/dashboard'>
 							Dashboard
 							<ArrowRight />
 						</Link>
-					</Button>
+					</Button> */}
+
+					<Login />
 				</section>
 			</main>
 		</>
