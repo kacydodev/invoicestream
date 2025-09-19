@@ -8,6 +8,7 @@ import {
 	AuthResponse,
 	SignInWithPasswordCredentials,
 } from '@supabase/supabase-js';
+import { extend } from 'zod/v4-mini';
 
 // const formSchema = z.object({
 // 	username: z.string().min(2, {
@@ -15,7 +16,9 @@ import {
 // 	}),
 // });
 
-export async function login(credentials: SignInWithPasswordCredentials) {
+export type Credentials = SignInWithPasswordCredentials;
+
+export async function login(credentials: Credentials) {
 	// console.log(credentials);
 	const supabase = await createClient();
 	const { error } = await supabase.auth.signInWithPassword(credentials);
