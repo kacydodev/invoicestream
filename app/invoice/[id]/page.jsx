@@ -1,5 +1,5 @@
 import { getInvoice } from './action';
-import Error from '@/components/Error';
+import ErrorDeprecated from '@/components/Error';
 import HeaderSection from './components/HeaderSection';
 import DescriptionSection from './components/DescriptionSection';
 import ItemSubSection from './components/ItemsSubSection';
@@ -11,7 +11,7 @@ export default async function InvoicePage({ params }) {
 	const { data: invoice, error } = await getInvoice(id);
 	// console.log('invoice:', invoice);
 
-	if (error) return <Error error={error} />;
+	if (error) return <ErrorDeprecated error={error} />;
 
 	return (
 		<>

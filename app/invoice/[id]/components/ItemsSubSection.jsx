@@ -8,13 +8,13 @@ import {
 	TableRow,
 } from '@/components/ui/table';
 import { getInvoiceItems } from '../action';
-import Error from '@/components/Error';
+import ErrorDeprecated from '@/components/Error';
 import { calculateTotal, formatPrice } from '@/utils/utils';
 
 export default async function ItemSubSection({ id }) {
 	const { data: items, error } = await getInvoiceItems(id);
 
-	if (error) return <Error error={error} />;
+	if (error) return <ErrorDeprecated error={error} />;
 
 	return (
 		<article className='col-span-3 bg-background'>

@@ -1,4 +1,4 @@
-import Error from '@/components/Error';
+import ErrorDeprecated from '@/components/Error';
 import { Hash } from 'lucide-react';
 import { formatDate } from '@/utils/utils';
 import {
