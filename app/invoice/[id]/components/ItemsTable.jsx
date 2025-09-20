@@ -17,7 +17,7 @@ export default async function ItemsTable({ id }) {
 	if (error) return <Error error={error} />;
 
 	return (
-		<Table className='col-span-3 bg-background'>
+		<Table className='bg-background'>
 			<TableHeader>
 				<TableRow className='[&>*]:text-muted-foreground [&>*]:text-sm'>
 					<TableHead>Name</TableHead>

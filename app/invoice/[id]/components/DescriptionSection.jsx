@@ -99,7 +99,8 @@ export default async function DescriptionSection({ invoice, children }) {
 					<p>{email}</p>
 				</div>
 
-				{children}
+				{/* DO NOT REMOVE DIV WRAPPER */}
+				<div className='col-span-3'>{children}</div>
 			</CardContent>
 		</Card>
 	);
