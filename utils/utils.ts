@@ -29,7 +29,10 @@ export function formatPrice(price: number) {
 	return result.slice(1); // remove currency symbol
 }
 
-export function calculateTotal(price: number | string, quantity: number) {
+export function calculateItemizedTotal(
+	price: number | string,
+	quantity: number
+) {
 	const result = Number(price) * quantity;
 	return formatPrice(result);
 }

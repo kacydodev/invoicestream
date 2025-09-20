@@ -2,7 +2,7 @@ import { getInvoice } from './action';
 import Error from '@/components/Error';
 import HeaderSection from './components/HeaderSection';
 import DescriptionSection from './components/DescriptionSection';
-import ItemSubSection from './components/ItemsSubSection';
+import ItemsTable from './components/ItemsTable';
 
 // type ParamsType = Promise<{ id: string }>;
 
@@ -18,7 +18,7 @@ export default async function InvoicePage({ params }) {
 			<main>
 				<HeaderSection status={invoice.status} />
 				<DescriptionSection invoice={invoice}>
-					<ItemSubSection id={id} />
+					<ItemsTable id={id} />
 				</DescriptionSection>
 			</main>
 		</>
